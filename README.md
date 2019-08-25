@@ -1,5 +1,5 @@
 It looks like this.
 
-![](sc.png)
+![](sc.PNG)
 
 Video documentation will be availabe here soon.
