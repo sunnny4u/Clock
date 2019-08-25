@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Js clock</title>
+  </head>
+  <body>
+
+    <center>
+    <h3 class="bg-danger w-50 font-weight-bold display-1 rounded">Js Watch</h3>
+      <div class="row w-50">
+
+        <div class="col-3">
+          <label class="font-weight-bold bg-warning rounded px-10">Hours</label><br>
+          <span id="hour" class="bg-primary font-weight-bold display-1 rounded"></span>
+        </div>
+        <div class="col-3">
+          <label class="font-weight-bold bg-warning rounded px-10">Minutes</label><br>
+          <span id="minute" class="bg-primary font-weight-bold display-1 rounded"></span>
+        </div>
+        <div class="col-3">
+          <label class="font-weight-bold bg-warning rounded px-10">Seconds</label><br>
+          <span id="second" class="bg-primary font-weight-bold display-1 rounded"></span>
+        </div>
+        <div class="col-3">
+          <label class="font-weight-bold bg-warning rounded px-10">AM/PM</label><br>
+          <span id="format" class="font-weight-bold display-1"></span>
+        </div>
+        
+      </div>
+    </center>
+
+
+    <script type="text/javascript">
+      function clock(){
+        var date = new Date();
+
+        var hour = date.getHours();
+        var minute = date.getMinutes();
+        var second = date.getSeconds();
+
+
+
+        document.getElementById("hour").innerHTML = hour;
+        document.getElementById("minute").innerHTML = minute;
+        document.getElementById("second").innerHTML = second;
+        document.getElementById("format").innerHTML = "PM";
+
+        if(hour < 12){
+          document.getElementById("format").innerHTML = "AM";
+        }
+        if(hour < 10){
+          document.getElementById("hour").innerHTML = "0"+hour;
+        }
+        if(minute < 10){
+          document.getElementById("minute").innerHTML = "0"+minute;
+        }
+        if(second < 10){
+          document.getElementById("second").innerHTML = "0"+second;
+        }
+
+
+        setInterval(clock, 1000);
+      }
+
+      clock();
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
