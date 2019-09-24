@@ -2,4 +2,4 @@ It looks like this.
 
 ![](sc.PNG)
 
-Video documentation will be availabe here soon.
+Video documentation: https://www.youtube.com/watch?v=4tgIVFRw1mM
